@@ -74,7 +74,7 @@ public:
 
 	void updateInputs(TextEditor& e)
 	{
-		String& text = e.getText();
+		String text = e.getText();
 		float val;
 		const bool isLo = &e == &loInput;
 
@@ -86,7 +86,7 @@ public:
 		}
 		else
 		{
-			val = CharacterFunctions::readDoubleValue(e.getText().toUTF8());
+			val = CharacterFunctions::readDoubleValue(text);
 		}
 
 		if (isLo)
